@@ -1,0 +1,155 @@
+body {
+    font-family: 'Press Start 2P', cursive;
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    /* Add a flex display to the body */
+    justify-content: center;
+    /* Center the content horizontally */
+    align-items: center;
+    /* Center the content vertically */
+    height: 100vh;
+    /* Use the full viewport height */
+}
+
+p {
+    color: grey;
+    font-weight: normal;
+    text-align: center;
+    line-height: 1rem;
+}
+
+#game {
+    margin: auto;
+    width: 500px;
+    height: 200px;
+    color: grey;
+    border: 5px solid;
+    position: relative;
+}
+
+#character {
+    width: 20px;
+    height: 50px;
+    background-color: #EA4335;
+    position: relative;
+    top: 150px;
+    left: 100px;
+}
+
+.animate {
+    animation: jump 500ms;
+}
+
+@keyframes jump {
+    0% {
+        top: 150px;
+    }
+
+    30% {
+        top: 100px;
+    }
+
+    70% {
+        top: 100px;
+    }
+
+    100% {
+        top: 150px;
+    }
+}
+
+#block1 {
+    width: 20px;
+    height: 20px;
+    background-color: #4285F4;
+    position: relative;
+    top: 130px;
+    left: 505px;
+    display: none; /* Initially hide the block */
+    animation: block 3s infinite linear paused;
+}
+
+#block2 {
+    width: 20px;
+    height: 20px;
+    background-color: #34A853;
+    position: relative;
+    top: 110px;
+    left: 505px;
+    display: none; /* Initially hide the block */
+    animation: block 3s infinite linear paused;
+    animation-delay: 1s;
+}
+
+#block3 {
+    width: 20px;
+    height: 20px;
+    background-color: #FBBC05;
+    position: relative;
+    top: 90px;
+    left: 505px;
+    display: none; /* Initially hide the block */
+    animation: block 3s infinite linear paused;
+    animation-delay: 2.2s;
+}
+
+@keyframes block {
+    0% {
+        left: 500px;
+    }
+
+    100% {
+        left: -20px;
+    }
+}
+
+#score {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 12px;
+    color: #444444;
+}
+
+#highScore {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 12px;
+    color: #444444;
+}
+
+#donate {
+    position: absolute;
+    top: 25px;
+    left: 10px;
+}
+
+#donate img {
+    width: 32px;
+    height: 32px;
+}
+
+#gameOver {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    color: red;
+    display: none;  /* Hide the "Game Over" message by default */
+}
+
+#instructions {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 12px;
+    line-height: 1rem;
+    text-align: center;
+    color: grey;
+}
